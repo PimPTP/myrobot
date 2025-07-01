@@ -1,0 +1,149 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-65e58daa46894fa5be03.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						6
+					]
+				},
+				{
+					"build" : "feetech_driver",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-feetech_driver-20df987b68f8314d1858.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "feetech_driver",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "feetech_ros2_driver",
+					"targetIndexes" : 
+					[
+						0,
+						3,
+						4,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "feetech_driver",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_generate_version_header__feetech_ros2_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_generate_version_header__feetech_ros2_driver-45beb85c520a78f27f24.json",
+					"name" : "ament_generate_version_header__feetech_ros2_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "communication_protocol::@734a2218608668bf7784",
+					"jsonFile" : "target-communication_protocol-18f301d5dcfab15657db.json",
+					"name" : "communication_protocol",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "demo::@734a2218608668bf7784",
+					"jsonFile" : "target-demo-a11ff75b60292818a856.json",
+					"name" : "demo",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "feetech_ros2_driver::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-feetech_ros2_driver-6b12c09a14d39d732bf1.json",
+					"name" : "feetech_ros2_driver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "feetech_ros2_driver_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-feetech_ros2_driver_uninstall-c1df0ea562c13632d398.json",
+					"name" : "feetech_ros2_driver_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "serial_port::@734a2218608668bf7784",
+					"jsonFile" : "target-serial_port-48459a45d42afe141b55.json",
+					"name" : "serial_port",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f400ed4d0a079e5d4e04.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver",
+		"source" : "/home/pim0ubuntu/myrobot_ws/src/feetech_ros2_driver"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

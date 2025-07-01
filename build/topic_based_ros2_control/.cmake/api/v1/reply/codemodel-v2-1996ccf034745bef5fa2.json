@@ -1,0 +1,139 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-493e05cc8102ef6f201c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"build" : "gtest",
+					"jsonFile" : "directory-gtest-0908a8c91ddba5d6c989.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "/opt/ros/jazzy/src/gtest_vendor",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "topic_based_ros2_control",
+					"targetIndexes" : 
+					[
+						2,
+						3,
+						4,
+						5
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "gtest",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "gtest::@0af4add9fe94340e763e",
+					"jsonFile" : "target-gtest-3b581b9006a9e4290e43.json",
+					"name" : "gtest",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "gtest_main::@0af4add9fe94340e763e",
+					"jsonFile" : "target-gtest_main-899d1db97d157807bbdd.json",
+					"name" : "gtest_main",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "topic_based_ros2_control::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-topic_based_ros2_control-1b0e1b416efe16e0cefa.json",
+					"name" : "topic_based_ros2_control",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "topic_based_ros2_control_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-topic_based_ros2_control_uninstall-4652b18c0166bc59c643.json",
+					"name" : "topic_based_ros2_control_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "topic_based_system_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-topic_based_system_test-c85cf69ef5729ebfd083.json",
+					"name" : "topic_based_system_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-05c24429c61f9a262829.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/pim0ubuntu/myrobot_ws/build/topic_based_ros2_control",
+		"source" : "/home/pim0ubuntu/myrobot_ws/src/topic_based_ros2_control"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

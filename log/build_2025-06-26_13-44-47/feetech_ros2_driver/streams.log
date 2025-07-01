@@ -1,0 +1,98 @@
+[0.016s] Invoking command in '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/pim0ubuntu/myrobot_ws/src/feetech_ros2_driver -DCMAKE_INSTALL_PREFIX=/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver
+[0.152s] -- The C compiler identification is GNU 13.3.0
+[0.280s] -- The CXX compiler identification is GNU 13.3.0
+[0.313s] -- Detecting C compiler ABI info
+[0.413s] -- Detecting C compiler ABI info - done
+[0.421s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.422s] -- Detecting C compile features
+[0.422s] -- Detecting C compile features - done
+[0.433s] -- Detecting CXX compiler ABI info
+[0.538s] -- Detecting CXX compiler ABI info - done
+[0.548s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.549s] -- Detecting CXX compile features
+[0.549s] -- Detecting CXX compile features - done
+[0.593s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.699s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.699s] -- Found Threads: TRUE  
+[0.716s] -- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+[0.717s] -- Checking for module 'libserial'
+[0.735s] --   Found libserial, version 1.0.0
+[0.761s] -- feetech_driver version: 0.1.0
+[0.770s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.961s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.154s] -- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.249s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.273s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.297s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.332s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.458s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.465s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.570s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.591s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.616s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.728s] -- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)
+[2.301s] -- Configuring done (2.3s)
+[2.341s] -- Generating done (0.0s)
+[2.346s] -- Build files have been written to: /home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver
+[2.360s] Invoked command in '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/pim0ubuntu/myrobot_ws/src/feetech_ros2_driver -DCMAKE_INSTALL_PREFIX=/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver
+[2.361s] Invoking command in '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver -- -j4 -l4
+[2.411s] [ 22%] [32mBuilding CXX object feetech_driver/CMakeFiles/serial_port.dir/src/serial_port.cpp.o[0m
+[2.412s] [ 22%] [34m[1mGenerating feetech_ros2_driver/version.hpp[0m
+[2.432s] [ 22%] Built target ament_generate_version_header__feetech_ros2_driver
+[6.270s] [ 33%] [32m[1mLinking CXX shared library libserial_port.so[0m
+[6.402s] [ 33%] Built target serial_port
+[6.425s] [ 44%] [32mBuilding CXX object feetech_driver/CMakeFiles/communication_protocol.dir/src/communication_protocol.cpp.o[0m
+[8.824s] [ 55%] [32m[1mLinking CXX shared library libcommunication_protocol.so[0m
+[8.918s] [ 55%] Built target communication_protocol
+[8.938s] [ 77%] [32mBuilding CXX object feetech_driver/CMakeFiles/demo.dir/examples/demo.cpp.o[0m
+[8.938s] [ 77%] [32mBuilding CXX object CMakeFiles/feetech_ros2_driver.dir/src/feetech_ros2_driver.cpp.o[0m
+[15.498s] [ 88%] [32m[1mLinking CXX executable demo[0m
+[15.619s] [ 88%] Built target demo
+[20.897s] [100%] [32m[1mLinking CXX shared library libfeetech_ros2_driver.so[0m
+[21.211s] [100%] Built target feetech_ros2_driver
+[21.223s] Invoked command in '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver -- -j4 -l4
+[21.234s] Invoking command in '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver
+[21.241s] -- Install configuration: ""
+[21.242s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libserial_port.so.0.1.0
+[21.242s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libserial_port.so.0
+[21.242s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libserial_port.so
+[21.242s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0.1.0
+[21.243s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0
+[21.243s] -- Set non-toolchain portion of runtime path of "/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0.1.0" to ""
+[21.243s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so
+[21.243s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/bin/demo
+[21.244s] -- Set non-toolchain portion of runtime path of "/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/bin/demo" to ""
+[21.244s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-config.cmake
+[21.244s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-config-version.cmake
+[21.244s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-targets.cmake
+[21.244s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-targets-noconfig.cmake
+[21.244s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/feetech_ros2_control_plugin_description.xml
+[21.245s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libfeetech_ros2_driver.so
+[21.247s] -- Set non-toolchain portion of runtime path of "/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libfeetech_ros2_driver.so" to ""
+[21.247s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver
+[21.247s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/feetech_ros2_driver.hpp
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/library_path.sh
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/library_path.dsv
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/version.hpp
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/package_run_dependencies/feetech_ros2_driver
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/parent_prefix_path/feetech_ros2_driver
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/ament_prefix_path.sh
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/ament_prefix_path.dsv
+[21.248s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/path.sh
+[21.250s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/path.dsv
+[21.250s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.bash
+[21.250s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.sh
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.zsh
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.dsv
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/package.dsv
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/packages/feetech_ros2_driver
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/feetech_ros2_driver
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverTargetsExport.cmake
+[21.251s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverTargetsExport-noconfig.cmake
+[21.252s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/ament_cmake_export_targets-extras.cmake
+[21.252s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/ament_cmake_export_dependencies-extras.cmake
+[21.252s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverConfig.cmake
+[21.252s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverConfig-version.cmake
+[21.252s] -- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/package.xml
+[21.254s] Invoked command in '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver

@@ -1,0 +1,346 @@
+[0.000000] (-) TimerEvent: {}
+[0.000527] (feetech_ros2_driver) JobQueued: {'identifier': 'feetech_ros2_driver', 'dependencies': OrderedDict()}
+[0.000573] (myrobot) JobQueued: {'identifier': 'myrobot', 'dependencies': OrderedDict()}
+[0.000591] (feetech_ros2_driver) JobStarted: {'identifier': 'feetech_ros2_driver'}
+[0.008344] (myrobot) JobStarted: {'identifier': 'myrobot'}
+[0.014894] (feetech_ros2_driver) JobProgress: {'identifier': 'feetech_ros2_driver', 'progress': 'cmake'}
+[0.015935] (feetech_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/pim0ubuntu/myrobot_ws/src/feetech_ros2_driver', '-DCMAKE_INSTALL_PREFIX=/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver'], 'cwd': '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pim0ubuntu', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pim0ubuntu', 'OLDPWD': '/home/pim0ubuntu/myrobot_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2266', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install:/home/pim0ubuntu/myrobot_ws/src/install:/home/pim0ubuntu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pim0ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pim0ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/pim0ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/pim0ubuntu/.local/bin:/home/pim0ubuntu/.local/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/2233,unix/Ubuntu:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2e5ac34e_c08d_479a_9f86_2ce4f0dec30a', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.PPYQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.115', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/myrobot_ws/src/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/l1/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy'}), 'shell': False}
+[0.100018] (-) TimerEvent: {}
+[0.152572] (feetech_ros2_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.200260] (-) TimerEvent: {}
+[0.280399] (feetech_ros2_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.300742] (-) TimerEvent: {}
+[0.313635] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.401240] (-) TimerEvent: {}
+[0.413143] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.420973] (feetech_ros2_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.422006] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.422830] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.433733] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.502227] (-) TimerEvent: {}
+[0.538345] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.548799] (feetech_ros2_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.549293] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.549844] (feetech_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.593125] (feetech_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.603550] (-) TimerEvent: {}
+[0.699378] (feetech_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.699649] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.703847] (-) TimerEvent: {}
+[0.716734] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") \n'}
+[0.717041] (feetech_ros2_driver) StdoutLine: {'line': b"-- Checking for module 'libserial'\n"}
+[0.735508] (feetech_ros2_driver) StdoutLine: {'line': b'--   Found libserial, version 1.0.0\n'}
+[0.761793] (feetech_ros2_driver) StdoutLine: {'line': b'-- feetech_driver version: 0.1.0\n'}
+[0.770833] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.804234] (-) TimerEvent: {}
+[0.830211] (myrobot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/myrobot', 'build', '--build-base', '/home/pim0ubuntu/myrobot_ws/build/myrobot/build', 'install', '--record', '/home/pim0ubuntu/myrobot_ws/build/myrobot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/pim0ubuntu/myrobot_ws/src/myrobot', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pim0ubuntu', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pim0ubuntu', 'OLDPWD': '/home/pim0ubuntu/myrobot_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2266', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install:/home/pim0ubuntu/myrobot_ws/src/install:/home/pim0ubuntu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pim0ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pim0ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/pim0ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/pim0ubuntu/.local/bin:/home/pim0ubuntu/.local/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/2233,unix/Ubuntu:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2e5ac34e_c08d_479a_9f86_2ce4f0dec30a', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.PPYQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.115', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pim0ubuntu/myrobot_ws/build/myrobot', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/myrobot_ws/src/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/l1/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[0.904498] (-) TimerEvent: {}
+[0.961374] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.004727] (-) TimerEvent: {}
+[1.080327] (myrobot) StdoutLine: {'line': b'running egg_info\n'}
+[1.096377] (myrobot) StdoutLine: {'line': b'writing ../../build/myrobot/myrobot.egg-info/PKG-INFO\n'}
+[1.096830] (myrobot) StdoutLine: {'line': b'writing dependency_links to ../../build/myrobot/myrobot.egg-info/dependency_links.txt\n'}
+[1.096967] (myrobot) StdoutLine: {'line': b'writing entry points to ../../build/myrobot/myrobot.egg-info/entry_points.txt\n'}
+[1.097170] (myrobot) StdoutLine: {'line': b'writing requirements to ../../build/myrobot/myrobot.egg-info/requires.txt\n'}
+[1.097350] (myrobot) StdoutLine: {'line': b'writing top-level names to ../../build/myrobot/myrobot.egg-info/top_level.txt\n'}
+[1.104974] (-) TimerEvent: {}
+[1.150225] (myrobot) StdoutLine: {'line': b"reading manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'\n"}
+[1.151228] (myrobot) StdoutLine: {'line': b"writing manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'\n"}
+[1.151819] (myrobot) StdoutLine: {'line': b'running build\n'}
+[1.151968] (myrobot) StdoutLine: {'line': b'running build_py\n'}
+[1.152050] (myrobot) StdoutLine: {'line': b'copying myrobot/state_publisher.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot\n'}
+[1.153087] (myrobot) StdoutLine: {'line': b'running install\n'}
+[1.154065] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found rclcpp: 28.1.9 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.161116] (myrobot) StdoutLine: {'line': b'running install_lib\n'}
+[1.185108] (myrobot) StdoutLine: {'line': b'copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/state_publisher.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot\n'}
+[1.186393] (myrobot) StdoutLine: {'line': b'byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/state_publisher.py to state_publisher.cpython-312.pyc\n'}
+[1.188224] (myrobot) StdoutLine: {'line': b'running install_data\n'}
+[1.188510] (myrobot) StdoutLine: {'line': b'copying package.xml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot\n'}
+[1.188594] (myrobot) StdoutLine: {'line': b'copying urdf/motor.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf\n'}
+[1.188663] (myrobot) StdoutLine: {'line': b'copying urdf/robot.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf\n'}
+[1.188733] (myrobot) StdoutLine: {'line': b'creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/config\n'}
+[1.188798] (myrobot) StdoutLine: {'line': b'copying config/controller.yaml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/config\n'}
+[1.188867] (myrobot) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.206673] (-) TimerEvent: {}
+[1.212848] (myrobot) StdoutLine: {'line': b"removing '/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[1.215839] (myrobot) StdoutLine: {'line': b'Copying ../../build/myrobot/myrobot.egg-info to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info\n'}
+[1.216119] (myrobot) StdoutLine: {'line': b'running install_scripts\n'}
+[1.249244] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.270635] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.297554] (feetech_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.306856] (-) TimerEvent: {}
+[1.332034] (feetech_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.352659] (myrobot) StdoutLine: {'line': b'Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot\n'}
+[1.353087] (myrobot) StdoutLine: {'line': b"writing list of installed files to '/home/pim0ubuntu/myrobot_ws/build/myrobot/install.log'\n"}
+[1.391273] (myrobot) CommandEnded: {'returncode': 0}
+[1.400448] (myrobot) JobEnded: {'identifier': 'myrobot', 'rc': 0}
+[1.407034] (-) TimerEvent: {}
+[1.458473] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.465900] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.507446] (-) TimerEvent: {}
+[1.570151] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.591322] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.608513] (-) TimerEvent: {}
+[1.616208] (feetech_ros2_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.708652] (-) TimerEvent: {}
+[1.727991] (feetech_ros2_driver) StdoutLine: {'line': b'-- Found hardware_interface: 4.29.0 (/opt/ros/jazzy/share/hardware_interface/cmake)\n'}
+[1.810000] (-) TimerEvent: {}
+[1.911034] (-) TimerEvent: {}
+[2.011507] (-) TimerEvent: {}
+[2.112080] (-) TimerEvent: {}
+[2.212896] (-) TimerEvent: {}
+[2.301218] (feetech_ros2_driver) StdoutLine: {'line': b'-- Configuring done (2.3s)\n'}
+[2.314557] (-) TimerEvent: {}
+[2.341435] (feetech_ros2_driver) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[2.346070] (feetech_ros2_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver\n'}
+[2.360842] (feetech_ros2_driver) CommandEnded: {'returncode': 0}
+[2.361240] (feetech_ros2_driver) JobProgress: {'identifier': 'feetech_ros2_driver', 'progress': 'build'}
+[2.361281] (feetech_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', '--', '-j4', '-l4'], 'cwd': '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pim0ubuntu', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pim0ubuntu', 'OLDPWD': '/home/pim0ubuntu/myrobot_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2266', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install:/home/pim0ubuntu/myrobot_ws/src/install:/home/pim0ubuntu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pim0ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pim0ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/pim0ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/pim0ubuntu/.local/bin:/home/pim0ubuntu/.local/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/2233,unix/Ubuntu:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2e5ac34e_c08d_479a_9f86_2ce4f0dec30a', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.PPYQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.115', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/myrobot_ws/src/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/l1/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy'}), 'shell': False}
+[2.411598] (feetech_ros2_driver) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object feetech_driver/CMakeFiles/serial_port.dir/src/serial_port.cpp.o\x1b[0m\n'}
+[2.412189] (feetech_ros2_driver) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating feetech_ros2_driver/version.hpp\x1b[0m\n'}
+[2.415591] (-) TimerEvent: {}
+[2.432397] (feetech_ros2_driver) StdoutLine: {'line': b'[ 22%] Built target ament_generate_version_header__feetech_ros2_driver\n'}
+[2.515881] (-) TimerEvent: {}
+[2.617049] (-) TimerEvent: {}
+[2.720915] (-) TimerEvent: {}
+[2.821356] (-) TimerEvent: {}
+[2.921936] (-) TimerEvent: {}
+[3.024231] (-) TimerEvent: {}
+[3.126197] (-) TimerEvent: {}
+[3.228099] (-) TimerEvent: {}
+[3.328619] (-) TimerEvent: {}
+[3.430645] (-) TimerEvent: {}
+[3.532310] (-) TimerEvent: {}
+[3.635179] (-) TimerEvent: {}
+[3.735930] (-) TimerEvent: {}
+[3.838199] (-) TimerEvent: {}
+[3.939428] (-) TimerEvent: {}
+[4.040236] (-) TimerEvent: {}
+[4.141024] (-) TimerEvent: {}
+[4.250355] (-) TimerEvent: {}
+[4.351583] (-) TimerEvent: {}
+[4.453341] (-) TimerEvent: {}
+[4.554370] (-) TimerEvent: {}
+[4.658139] (-) TimerEvent: {}
+[4.765066] (-) TimerEvent: {}
+[4.866790] (-) TimerEvent: {}
+[4.969337] (-) TimerEvent: {}
+[5.074974] (-) TimerEvent: {}
+[5.178145] (-) TimerEvent: {}
+[5.279460] (-) TimerEvent: {}
+[5.381112] (-) TimerEvent: {}
+[5.484308] (-) TimerEvent: {}
+[5.589732] (-) TimerEvent: {}
+[5.691526] (-) TimerEvent: {}
+[5.793500] (-) TimerEvent: {}
+[5.893881] (-) TimerEvent: {}
+[5.997960] (-) TimerEvent: {}
+[6.100667] (-) TimerEvent: {}
+[6.204694] (-) TimerEvent: {}
+[6.270127] (feetech_ros2_driver) StdoutLine: {'line': b'[ 33%] \x1b[32m\x1b[1mLinking CXX shared library libserial_port.so\x1b[0m\n'}
+[6.305921] (-) TimerEvent: {}
+[6.402276] (feetech_ros2_driver) StdoutLine: {'line': b'[ 33%] Built target serial_port\n'}
+[6.406922] (-) TimerEvent: {}
+[6.425187] (feetech_ros2_driver) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object feetech_driver/CMakeFiles/communication_protocol.dir/src/communication_protocol.cpp.o\x1b[0m\n'}
+[6.507822] (-) TimerEvent: {}
+[6.610079] (-) TimerEvent: {}
+[6.715273] (-) TimerEvent: {}
+[6.821344] (-) TimerEvent: {}
+[6.924288] (-) TimerEvent: {}
+[7.029233] (-) TimerEvent: {}
+[7.134243] (-) TimerEvent: {}
+[7.236022] (-) TimerEvent: {}
+[7.340108] (-) TimerEvent: {}
+[7.443427] (-) TimerEvent: {}
+[7.545591] (-) TimerEvent: {}
+[7.650583] (-) TimerEvent: {}
+[7.754476] (-) TimerEvent: {}
+[7.857870] (-) TimerEvent: {}
+[7.960160] (-) TimerEvent: {}
+[8.061693] (-) TimerEvent: {}
+[8.163806] (-) TimerEvent: {}
+[8.266344] (-) TimerEvent: {}
+[8.369769] (-) TimerEvent: {}
+[8.473309] (-) TimerEvent: {}
+[8.574590] (-) TimerEvent: {}
+[8.677930] (-) TimerEvent: {}
+[8.780733] (-) TimerEvent: {}
+[8.824120] (feetech_ros2_driver) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libcommunication_protocol.so\x1b[0m\n'}
+[8.882121] (-) TimerEvent: {}
+[8.918219] (feetech_ros2_driver) StdoutLine: {'line': b'[ 55%] Built target communication_protocol\n'}
+[8.938024] (feetech_ros2_driver) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object feetech_driver/CMakeFiles/demo.dir/examples/demo.cpp.o\x1b[0m\n'}
+[8.938846] (feetech_ros2_driver) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/feetech_ros2_driver.dir/src/feetech_ros2_driver.cpp.o\x1b[0m\n'}
+[8.982598] (-) TimerEvent: {}
+[9.085361] (-) TimerEvent: {}
+[9.185848] (-) TimerEvent: {}
+[9.290013] (-) TimerEvent: {}
+[9.393932] (-) TimerEvent: {}
+[9.494666] (-) TimerEvent: {}
+[9.595256] (-) TimerEvent: {}
+[9.695905] (-) TimerEvent: {}
+[9.797200] (-) TimerEvent: {}
+[9.901357] (-) TimerEvent: {}
+[10.002451] (-) TimerEvent: {}
+[10.108343] (-) TimerEvent: {}
+[10.208860] (-) TimerEvent: {}
+[10.310234] (-) TimerEvent: {}
+[10.411163] (-) TimerEvent: {}
+[10.517650] (-) TimerEvent: {}
+[10.624585] (-) TimerEvent: {}
+[10.730953] (-) TimerEvent: {}
+[10.832316] (-) TimerEvent: {}
+[10.937777] (-) TimerEvent: {}
+[11.038498] (-) TimerEvent: {}
+[11.139389] (-) TimerEvent: {}
+[11.240617] (-) TimerEvent: {}
+[11.341471] (-) TimerEvent: {}
+[11.448511] (-) TimerEvent: {}
+[11.549116] (-) TimerEvent: {}
+[11.650769] (-) TimerEvent: {}
+[11.752364] (-) TimerEvent: {}
+[11.855739] (-) TimerEvent: {}
+[11.961185] (-) TimerEvent: {}
+[12.068388] (-) TimerEvent: {}
+[12.170164] (-) TimerEvent: {}
+[12.271439] (-) TimerEvent: {}
+[12.373702] (-) TimerEvent: {}
+[12.475685] (-) TimerEvent: {}
+[12.576679] (-) TimerEvent: {}
+[12.679705] (-) TimerEvent: {}
+[12.780477] (-) TimerEvent: {}
+[12.882563] (-) TimerEvent: {}
+[12.983352] (-) TimerEvent: {}
+[13.084496] (-) TimerEvent: {}
+[13.189249] (-) TimerEvent: {}
+[13.295029] (-) TimerEvent: {}
+[13.395713] (-) TimerEvent: {}
+[13.496255] (-) TimerEvent: {}
+[13.598371] (-) TimerEvent: {}
+[13.699505] (-) TimerEvent: {}
+[13.800925] (-) TimerEvent: {}
+[13.905636] (-) TimerEvent: {}
+[14.006600] (-) TimerEvent: {}
+[14.107297] (-) TimerEvent: {}
+[14.209085] (-) TimerEvent: {}
+[14.311233] (-) TimerEvent: {}
+[14.412033] (-) TimerEvent: {}
+[14.512997] (-) TimerEvent: {}
+[14.613758] (-) TimerEvent: {}
+[14.714664] (-) TimerEvent: {}
+[14.815839] (-) TimerEvent: {}
+[14.916353] (-) TimerEvent: {}
+[15.017233] (-) TimerEvent: {}
+[15.122341] (-) TimerEvent: {}
+[15.223480] (-) TimerEvent: {}
+[15.325146] (-) TimerEvent: {}
+[15.426405] (-) TimerEvent: {}
+[15.498634] (feetech_ros2_driver) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable demo\x1b[0m\n'}
+[15.527557] (-) TimerEvent: {}
+[15.619048] (feetech_ros2_driver) StdoutLine: {'line': b'[ 88%] Built target demo\n'}
+[15.628282] (-) TimerEvent: {}
+[15.736321] (-) TimerEvent: {}
+[15.837349] (-) TimerEvent: {}
+[15.939568] (-) TimerEvent: {}
+[16.043181] (-) TimerEvent: {}
+[16.144938] (-) TimerEvent: {}
+[16.248026] (-) TimerEvent: {}
+[16.349753] (-) TimerEvent: {}
+[16.450339] (-) TimerEvent: {}
+[16.552061] (-) TimerEvent: {}
+[16.653641] (-) TimerEvent: {}
+[16.754515] (-) TimerEvent: {}
+[16.859573] (-) TimerEvent: {}
+[16.964369] (-) TimerEvent: {}
+[17.066121] (-) TimerEvent: {}
+[17.169847] (-) TimerEvent: {}
+[17.271007] (-) TimerEvent: {}
+[17.373403] (-) TimerEvent: {}
+[17.474519] (-) TimerEvent: {}
+[17.576835] (-) TimerEvent: {}
+[17.683327] (-) TimerEvent: {}
+[17.785980] (-) TimerEvent: {}
+[17.887684] (-) TimerEvent: {}
+[17.988527] (-) TimerEvent: {}
+[18.091142] (-) TimerEvent: {}
+[18.191841] (-) TimerEvent: {}
+[18.293108] (-) TimerEvent: {}
+[18.395140] (-) TimerEvent: {}
+[18.495731] (-) TimerEvent: {}
+[18.599741] (-) TimerEvent: {}
+[18.700691] (-) TimerEvent: {}
+[18.802746] (-) TimerEvent: {}
+[18.905799] (-) TimerEvent: {}
+[19.008132] (-) TimerEvent: {}
+[19.111589] (-) TimerEvent: {}
+[19.215299] (-) TimerEvent: {}
+[19.316898] (-) TimerEvent: {}
+[19.418746] (-) TimerEvent: {}
+[19.519682] (-) TimerEvent: {}
+[19.621353] (-) TimerEvent: {}
+[19.722902] (-) TimerEvent: {}
+[19.824066] (-) TimerEvent: {}
+[19.924594] (-) TimerEvent: {}
+[20.026810] (-) TimerEvent: {}
+[20.129709] (-) TimerEvent: {}
+[20.232779] (-) TimerEvent: {}
+[20.333742] (-) TimerEvent: {}
+[20.435794] (-) TimerEvent: {}
+[20.537728] (-) TimerEvent: {}
+[20.641002] (-) TimerEvent: {}
+[20.742817] (-) TimerEvent: {}
+[20.845330] (-) TimerEvent: {}
+[20.897714] (feetech_ros2_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libfeetech_ros2_driver.so\x1b[0m\n'}
+[20.945871] (-) TimerEvent: {}
+[21.046431] (-) TimerEvent: {}
+[21.148907] (-) TimerEvent: {}
+[21.211733] (feetech_ros2_driver) StdoutLine: {'line': b'[100%] Built target feetech_ros2_driver\n'}
+[21.223812] (feetech_ros2_driver) CommandEnded: {'returncode': 0}
+[21.224491] (feetech_ros2_driver) JobProgress: {'identifier': 'feetech_ros2_driver', 'progress': 'install'}
+[21.233889] (feetech_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver'], 'cwd': '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'pim0ubuntu', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber/lib:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/pim0ubuntu', 'OLDPWD': '/home/pim0ubuntu/myrobot_ws/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '2266', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install:/home/pim0ubuntu/myrobot_ws/src/install:/home/pim0ubuntu/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'pim0ubuntu', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@wayland.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'pim0ubuntu', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/home/pim0ubuntu/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/pim0ubuntu/.local/bin:/home/pim0ubuntu/.local/bin', 'SESSION_MANAGER': 'local/Ubuntu:@/tmp/.ICE-unix/2233,unix/Ubuntu:/tmp/.ICE-unix/2233', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/2e5ac34e_c08d_479a_9f86_2ce4f0dec30a', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.PPYQ82', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.115', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/pim0ubuntu/myrobot_ws/build/feetech_ros2_driver', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/myrobot_ws/src/install/myrobot/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/l1/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.12/site-packages:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/pim0ubuntu/ros2_ws/install/turtlesim_plus_interfaces:/home/pim0ubuntu/ros2_ws/install/turtlesim_plus:/home/pim0ubuntu/ros2_ws/install/l1:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_wait_set:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_multithreaded_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_timer:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_composition:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_cbg_executor:/home/pim0ubuntu/ros2_ws/install/examples_rclcpp_async_client:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/pim0ubuntu/myrobot_ws/install/myrobot:/home/pim0ubuntu/myrobot_ws/src/install/myrobot:/home/pim0ubuntu/ros2_ws/install/launch_testing_examples:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_service:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_publisher:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_server:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_minimal_action_client:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_guard_conditions:/home/pim0ubuntu/ros2_ws/install/examples_rclpy_executors:/opt/ros/jazzy'}), 'shell': False}
+[21.241761] (feetech_ros2_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.242008] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libserial_port.so.0.1.0\n'}
+[21.242633] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libserial_port.so.0\n'}
+[21.242779] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libserial_port.so\n'}
+[21.242849] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0.1.0\n'}
+[21.243038] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0\n'}
+[21.243320] (feetech_ros2_driver) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so.0.1.0" to ""\n'}
+[21.243419] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libcommunication_protocol.so\n'}
+[21.243492] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/bin/demo\n'}
+[21.244380] (feetech_ros2_driver) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/bin/demo" to ""\n'}
+[21.244539] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-config.cmake\n'}
+[21.244649] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-config-version.cmake\n'}
+[21.244736] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-targets.cmake\n'}
+[21.244815] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/cmake/feetech_driver/feetech_driver-targets-noconfig.cmake\n'}
+[21.245024] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/feetech_ros2_control_plugin_description.xml\n'}
+[21.245132] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libfeetech_ros2_driver.so\n'}
+[21.247060] (feetech_ros2_driver) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/lib/libfeetech_ros2_driver.so" to ""\n'}
+[21.247875] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver\n'}
+[21.247992] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver\n'}
+[21.248079] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/feetech_ros2_driver.hpp\n'}
+[21.248158] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/library_path.sh\n'}
+[21.248203] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/library_path.dsv\n'}
+[21.248290] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/include/feetech_ros2_driver/feetech_ros2_driver/version.hpp\n'}
+[21.248343] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/package_run_dependencies/feetech_ros2_driver\n'}
+[21.248571] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/parent_prefix_path/feetech_ros2_driver\n'}
+[21.248692] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/ament_prefix_path.sh\n'}
+[21.248788] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/ament_prefix_path.dsv\n'}
+[21.248869] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/path.sh\n'}
+[21.248943] (-) TimerEvent: {}
+[21.250195] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/environment/path.dsv\n'}
+[21.250328] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.bash\n'}
+[21.250389] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.sh\n'}
+[21.251097] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.zsh\n'}
+[21.251187] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/local_setup.dsv\n'}
+[21.251805] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/package.dsv\n'}
+[21.251868] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/packages/feetech_ros2_driver\n'}
+[21.251916] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/ament_index/resource_index/hardware_interface__pluginlib__plugin/feetech_ros2_driver\n'}
+[21.251962] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverTargetsExport.cmake\n'}
+[21.252007] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverTargetsExport-noconfig.cmake\n'}
+[21.252054] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[21.252166] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[21.252256] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverConfig.cmake\n'}
+[21.252322] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/cmake/feetech_ros2_driverConfig-version.cmake\n'}
+[21.252372] (feetech_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/pim0ubuntu/myrobot_ws/install/feetech_ros2_driver/share/feetech_ros2_driver/package.xml\n'}
+[21.254477] (feetech_ros2_driver) CommandEnded: {'returncode': 0}
+[21.269378] (feetech_ros2_driver) JobEnded: {'identifier': 'feetech_ros2_driver', 'rc': 0}
+[21.270187] (-) EventReactorShutdown: {}

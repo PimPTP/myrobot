@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="myrobot">
+
+  <xacro:macro name="make_link" params="name">
+    <link name="${name}">
+      <visual>
+        <geometry>
+          <cylinder length="1" radius="0.5"/>
+        </geometry>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+        <material name="grey">
+          <color rgba="0.6 0.6 0.6 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <cylinder length="1" radius="0.5"/>
+        </geometry>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      </collision>
+      <inertial>
+        <mass value="0.5"/>
+        <inertia ixx="0.01" iyy="0.01" izz="0.01" ixy="0.0" ixz="0.0" iyz="0.0"/>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+
+  <xacro:macro name="make_joint" params="name parent child xyz rpy axis">
+    <joint name="${name}" type="revolute">
+      <parent link="${parent}"/>
+      <child link="${child}"/>
+      <origin xyz="${xyz}" rpy="${rpy}"/>
+      <axis xyz="${axis}"/>
+      <limit lower="-1.57" upper="1.57" effort="1.0" velocity="1.0"/>
+    </joint>
+  </xacro:macro>
+
+  <xacro:make_link name="link_0"/>
+  <xacro:make_link name="link_1"/>
+  <xacro:make_link name="link_2"/>
+  <xacro:make_link name="link_3"/>
+  <xacro:make_link name="link_4"/>
+  <xacro:make_link name="link_5"/>
+  <xacro:make_link name="link_6"/>
+
+  <xacro:make_joint name="joint_1" parent="link_0" child="link_1" xyz="0 1 0" rpy="1.57 0 0" axis="0 0 1"/>
+  <xacro:make_joint name="joint_2" parent="link_1" child="link_2" xyz="0 0 1" rpy="0 1.57 0" axis="0 0 1"/>
+  <xacro:make_joint name="joint_3" parent="link_2" child="link_3" xyz="0 1 0" rpy="1.57 0 0" axis="0 0 1"/>
+  <xacro:make_joint name="joint_4" parent="link_3" child="link_4" xyz="0 0 1" rpy="-1.57 0 0" axis="0 0 1"/>
+  <xacro:make_joint name="joint_5" parent="link_4" child="link_5" xyz="0 1 0" rpy="-1.57 0 0" axis="0 0 1"/>
+  <xacro:make_joint name="joint_6" parent="link_5" child="link_6" xyz="0 0 1" rpy="-1.57 0 0" axis="0 0 1"/>
+
+</robot>

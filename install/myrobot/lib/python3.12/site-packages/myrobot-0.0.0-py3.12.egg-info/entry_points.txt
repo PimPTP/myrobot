@@ -1,0 +1,3 @@
+[console_scripts]
+send_move = myrobot.send_move:main
+state_publisher = myrobot.state_publisher:main
