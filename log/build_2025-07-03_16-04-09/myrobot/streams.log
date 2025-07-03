@@ -1,0 +1,30 @@
+[0.749s] Invoking command in '/home/pim0ubuntu/myrobot_ws/build/myrobot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pim0ubuntu/myrobot_ws/build/myrobot/build --no-deps symlink_data
+[1.143s] running develop
+[1.361s] running egg_info
+[1.361s] creating myrobot.egg-info
+[1.378s] writing myrobot.egg-info/PKG-INFO
+[1.379s] writing dependency_links to myrobot.egg-info/dependency_links.txt
+[1.379s] writing entry points to myrobot.egg-info/entry_points.txt
+[1.379s] writing requirements to myrobot.egg-info/requires.txt
+[1.379s] writing top-level names to myrobot.egg-info/top_level.txt
+[1.380s] writing manifest file 'myrobot.egg-info/SOURCES.txt'
+[1.427s] reading manifest file 'myrobot.egg-info/SOURCES.txt'
+[1.428s] writing manifest file 'myrobot.egg-info/SOURCES.txt'
+[1.466s] running build_ext
+[1.466s] Creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot.egg-link (link to .)
+[1.466s] Installing send_move script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.466s] Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.466s] 
+[1.468s] Installed /home/pim0ubuntu/myrobot_ws/build/myrobot
+[1.468s] running symlink_data
+[1.468s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index
+[1.469s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index
+[1.469s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+[1.469s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/resource/myrobot -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+[1.469s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/package.xml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot
+[1.469s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.469s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/launch/operate.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.469s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/launch/display.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.469s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
+[1.469s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/urdf/robot.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
+[1.535s] Invoked command in '/home/pim0ubuntu/myrobot_ws/build/myrobot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pim0ubuntu/myrobot_ws/build/myrobot/build --no-deps symlink_data

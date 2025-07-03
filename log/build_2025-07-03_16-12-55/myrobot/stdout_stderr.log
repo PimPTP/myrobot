@@ -1,0 +1,58 @@
+running develop
+Removing /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot.egg-link (link to .)
+running egg_info
+writing ../../build/myrobot/myrobot.egg-info/PKG-INFO
+writing dependency_links to ../../build/myrobot/myrobot.egg-info/dependency_links.txt
+writing entry points to ../../build/myrobot/myrobot.egg-info/entry_points.txt
+writing requirements to ../../build/myrobot/myrobot.egg-info/requires.txt
+writing top-level names to ../../build/myrobot/myrobot.egg-info/top_level.txt
+reading manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'
+writing manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build
+creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib
+creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+copying feetech_tuna/servotemplates.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+copying feetech_tuna/tuna.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+copying feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+copying myrobot/send_move.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+copying myrobot/state_publisher.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+copying myrobot/__init__.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna
+copying feetech_tuna/feetech_tuna/feetech_tuna.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna
+copying feetech_tuna/feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna
+running install
+running install_lib
+creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/servotemplates.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna/feetech_tuna.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/tuna.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/send_move.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/state_publisher.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/__init__.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/servotemplates.py to servotemplates.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/feetech_tuna.py to feetech_tuna.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/tuna.py to tuna.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/send_move.py to send_move.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/state_publisher.py to state_publisher.cpython-312.pyc
+byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__init__.py to __init__.cpython-312.pyc
+running install_data
+copying resource/myrobot -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+copying package.xml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot
+copying launch/operate.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+copying launch/display.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+copying urdf/robot.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
+running install_egg_info
+Copying ../../build/myrobot/myrobot.egg-info to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info
+running install_scripts
+Installing send_move script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+writing list of installed files to '/home/pim0ubuntu/myrobot_ws/build/myrobot/install.log'
