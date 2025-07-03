@@ -106,7 +106,7 @@ class SendMove(Node):
         sid = self.get_parameter('rw_id').value
         if sid == 0:
             res.success = False
-            res.message = 'rw_id must be > 0'
+            res.message = '0'
             return res
         regs = self.tuna.listRegs(sid)
         if not regs:
