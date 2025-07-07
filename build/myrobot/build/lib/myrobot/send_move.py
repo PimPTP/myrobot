@@ -46,6 +46,10 @@ class SendMove(Node):
         self.create_service(Trigger, 'writereg', self.write_reg)
 
     def cmd_callback(self, msg: JointTrajectory):
+        if not msg.points:
+            return
+        pt = msg.points[-1]
+
         for pt in msg.points:
             for i, name in enumerate(msg.joint_names):
                 if name not in JOINTS:
@@ -54,22 +58,24 @@ class SendMove(Node):
                 sid = JOINT_ID[idx]
 
                 pos_rad = pt.positions[i]
+                pos_cnt  = int(pos_rad * (4095.0 / (2*math.pi)))   
+                pos_cnt  = max(0, min(4095, pos_cnt))
 
                 vel_rpm0 = (pt.velocities[i] * 60.0 / (2 * math.pi)
                             if pt.velocities and i < len(pt.velocities) else 0.0)
                 vel_rpm = vel_rpm0 or 50
+                vel_cnt  = int(vel_rpm * (1/0.24))           
+                vel_cnt  = max(1, min(1000, vel_cnt)) 
 
                 t_ms = pt.time_from_start.sec * 1000 + pt.time_from_start.nanosec / 1e6
                 if t_ms == 0:
-                    time_s  = abs(pos_rad) / (vel_rpm * 2 * math.pi / 60)
-                    time_ms = max(int(time_s * 1000), 100)
+                    time_ms = max(int(abs(pos_rad) / (vel_rpm*2*math.pi/60) * 1000), 100)
                 else:
                     time_ms = int(t_ms)
                     if vel_rpm0 == 0:
-                        vel_rpm = abs(pos_rad) * 60 / (time_ms/1000 * 2 * math.pi)
-
-                pos_cnt = int(pos_rad * (750.0 / math.pi))
-                vel_cnt = int(vel_rpm / (240.0 / 1000.0))
+                        vel_rpm = abs(pos_rad) * 60 / (time_ms/1000 * 2*math.pi)
+                        vel_cnt = max(1, min(1000, int(vel_rpm * (1/0.24))))
+                time_ms = max(1, min(30000, time_ms)) 
 
                 self.tuna.writeReg(sid, 42, pos_cnt)
                 self.tuna.writeReg(sid, 44, time_ms)
@@ -81,12 +87,12 @@ class SendMove(Node):
 
         for name, sid in zip(JOINTS, JOINT_ID):
             pos_cnt = self.tuna.readReg(sid, 56)
-            speed_cnt = self.tuna.readReg(sid, 58) or 0
+            speed_cnt = self.tuna.readReg(sid, 58)
             if pos_cnt is None:
                 continue
             js.name.append(name)
-            js.position.append(pos_cnt / (750.0 / math.pi))
-            js.velocity.append(speed_cnt * (240.0/1000.0) * (2*math.pi/60))
+            js.position.append(pos_cnt / (4095.0 / (2 * math.pi)))
+            js.velocity.append(speed_cnt * 0.24 * (2*math.pi/60))
 
         if js.name:
             self.pub_state.publish(js)
