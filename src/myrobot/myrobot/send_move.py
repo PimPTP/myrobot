@@ -61,9 +61,9 @@ class SendMove(Node):
                 pos_cnt  = int(pos_rad * (4095.0 / (2*math.pi)))   
                 pos_cnt  = max(0, min(4095, pos_cnt))
 
-                vel_rpm0 = (pt.velocities[i] * 60.0 / (2 * math.pi)
+                vel_rpm = (pt.velocities[i] * 60.0 / (2 * math.pi)
                             if pt.velocities and i < len(pt.velocities) else 0.0)
-                vel_rpm = vel_rpm0 or 50
+                if vel_rpm == 0.0: vel_rpm = 50
                 vel_cnt  = int(vel_rpm * (1/0.24))           
                 vel_cnt  = max(1, min(1000, vel_cnt)) 
 
@@ -72,7 +72,7 @@ class SendMove(Node):
                     time_ms = max(int(abs(pos_rad) / (vel_rpm*2*math.pi/60) * 1000), 100)
                 else:
                     time_ms = int(t_ms)
-                    if vel_rpm0 == 0:
+                    if vel_rpm == 0:
                         vel_rpm = abs(pos_rad) * 60 / (time_ms/1000 * 2*math.pi)
                         vel_cnt = max(1, min(1000, int(vel_rpm * (1/0.24))))
                 time_ms = max(1, min(30000, time_ms)) 
