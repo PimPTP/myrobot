@@ -1,6 +1,7 @@
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/servotemplates.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/tuna.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__init__.py
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/servo_srv.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/send_move.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/state_publisher.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__init__.py
@@ -9,6 +10,7 @@
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__pycache__/servotemplates.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__pycache__/tuna.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__pycache__/__init__.cpython-312.pyc
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/servo_srv.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/send_move.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/state_publisher.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/__init__.cpython-312.pyc

@@ -6,6 +6,7 @@ from trajectory_msgs.msg import JointTrajectory
 from sensor_msgs.msg import JointState
 from std_srvs.srv import Trigger
 from feetech_tuna.feetech_tuna import FeetechTuna
+from .servo_srv import ServoSrv
 
 SERIAL_PORT = '/dev/ttyUSB0'
 BAUD_RATE = 115200
@@ -36,14 +37,7 @@ class SendMove(Node):
 
         self.timer = self.create_timer(0.1, self.publish_states)
 
-        self.declare_parameter('rw_id', 0)
-        self.declare_parameter('rw_addr', 0)
-        self.declare_parameter('rw_value', 0)
- 
-        self.create_service(Trigger, 'listservos', self.list_servos)
-        self.create_service(Trigger, 'listregs', self.list_regs)
-        self.create_service(Trigger, 'readreg', self.read_reg)
-        self.create_service(Trigger, 'writereg', self.write_reg)
+        self.servo_srv = ServoSrv(self, self.tuna)
 
     def cmd_callback(self, msg: JointTrajectory):
         if not msg.points:
@@ -76,9 +70,9 @@ class SendMove(Node):
                         vel_cnt = max(1, min(1000, int(vel_rpm / 0.24)))
                 time_ms = max(1, min(30000, time_ms)) 
 
-                self.tuna.writeReg(sid, 42, pos_cnt)
-                self.tuna.writeReg(sid, 44, time_ms)
                 self.tuna.writeReg(sid, 46, vel_cnt)
+                self.tuna.writeReg(sid, 44, time_ms)
+                self.tuna.writeReg(sid, 42, pos_cnt)
 
     def publish_states(self):
         js = JointState()
@@ -95,48 +89,6 @@ class SendMove(Node):
 
         if js.name:
             self.pub_state.publish(js)
-
-    def list_servos(self, req, res):
-        servos = self.tuna.listServos()
-        if servos:
-            res.success = True
-            res.message = ','.join(f"{s['id']}" for s in servos)
-        else:
-            res.success = False
-            res.message = 'No servos found'
-        return res
-
-    def list_regs(self, req, res):
-        sid = self.get_parameter('rw_id').value
-        if sid == 0:
-            res.success = False
-            res.message = '00'
-            return res
-        regs = self.tuna.listRegs(sid)
-        if not regs:
-            res.success = False
-            res.message = f'Servo {sid} not responding'
-            return res
-        res.success = True
-        res.message = '; '.join(f"{r['addr']}:{r['name']}={r['value']}" for r in regs)
-        return res
-
-    def read_reg(self, req, res):
-        sid = self.get_parameter('rw_id').value
-        addr = self.get_parameter('rw_addr').value
-        value = self.tuna.readReg(sid, addr)
-        res.success = value is not None
-        res.message = str(value if value is not None else '00')
-        return res
-
-    def write_reg(self, req, res):
-        sid = self.get_parameter('rw_id').value
-        addr = self.get_parameter('rw_addr').value
-        value  = self.get_parameter('rw_value').value
-        ans = self.tuna.writeReg(sid, addr, value)
-        res.success = bool(ans)
-        res.message = str(value if value is not None else '00')
-        return res
     
     def destroy_node(self):
         self.tuna.closeSerialPort()
