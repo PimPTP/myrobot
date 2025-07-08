@@ -48,7 +48,6 @@ class SendMove(Node):
     def cmd_callback(self, msg: JointTrajectory):
         if not msg.points:
             return
-        pt = msg.points[-1]
 
         for pt in msg.points:
             for i, name in enumerate(msg.joint_names):
@@ -58,13 +57,13 @@ class SendMove(Node):
                 sid = JOINT_ID[idx]
 
                 pos_rad = pt.positions[i]
-                pos_cnt  = int(pos_rad * (4095.0 / (2*math.pi)))   
+                pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096  
                 pos_cnt  = max(0, min(4095, pos_cnt))
 
                 vel_rpm = (pt.velocities[i] * 60.0 / (2 * math.pi)
                             if pt.velocities and i < len(pt.velocities) else 0.0)
                 if vel_rpm == 0.0: vel_rpm = 50
-                vel_cnt  = int(vel_rpm * (1/0.24))           
+                vel_cnt  = int(vel_rpm / 0.24)           
                 vel_cnt  = max(1, min(1000, vel_cnt)) 
 
                 t_ms = pt.time_from_start.sec * 1000 + pt.time_from_start.nanosec / 1e6
@@ -73,8 +72,8 @@ class SendMove(Node):
                 else:
                     time_ms = int(t_ms)
                     if vel_rpm == 0:
-                        vel_rpm = abs(pos_rad) * 60 / (time_ms/1000 * 2*math.pi)
-                        vel_cnt = max(1, min(1000, int(vel_rpm * (1/0.24))))
+                        vel_rpm = abs(pos_rad) * 60 / (time_ms / 1000 * 2*math.pi)
+                        vel_cnt = max(1, min(1000, int(vel_rpm / 0.24)))
                 time_ms = max(1, min(30000, time_ms)) 
 
                 self.tuna.writeReg(sid, 42, pos_cnt)
@@ -91,12 +90,11 @@ class SendMove(Node):
             if pos_cnt is None:
                 continue
             js.name.append(name)
-            js.position.append(pos_cnt / (4095.0 / (2 * math.pi)))
-            js.velocity.append(speed_cnt * 0.24 * (2*math.pi/60))
+            js.position.append((pos_cnt / 4096.0) * 2*math.pi - math.pi)
+            js.velocity.append(speed_cnt * 0.24 * 2*math.pi / 60)
 
         if js.name:
             self.pub_state.publish(js)
-
 
     def list_servos(self, req, res):
         servos = self.tuna.listServos()
