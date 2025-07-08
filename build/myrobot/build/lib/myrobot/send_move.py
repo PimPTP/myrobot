@@ -110,7 +110,7 @@ class SendMove(Node):
         sid = self.get_parameter('rw_id').value
         if sid == 0:
             res.success = False
-            res.message = '0'
+            res.message = '00'
             return res
         regs = self.tuna.listRegs(sid)
         if not regs:
@@ -126,16 +126,16 @@ class SendMove(Node):
         addr = self.get_parameter('rw_addr').value
         value = self.tuna.readReg(sid, addr)
         res.success = value is not None
-        res.message = str(value if value is not None else '0')
+        res.message = str(value if value is not None else '00')
         return res
 
     def write_reg(self, req, res):
         sid = self.get_parameter('rw_id').value
         addr = self.get_parameter('rw_addr').value
         value  = self.get_parameter('rw_value').value
-        ok = self.tuna.writeReg(sid, addr, value)
-        res.success = bool(ok)
-        res.message = 'OK' if ok else '0'
+        ans = self.tuna.writeReg(sid, addr, value)
+        res.success = bool(ans)
+        res.message = str(value if value is not None else '00')
         return res
     
     def destroy_node(self):
