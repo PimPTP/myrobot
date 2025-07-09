@@ -101,10 +101,25 @@ class SendMove(Node):
             self.tuna.writeReg(sid, 46, vel_cnt)
             self.tuna.writeReg(sid, 44, time_ms)
             self.tuna.writeReg(sid, 42, pos_cnt)
+
+    def wait_stopped(self):
+        while True:
+            all_stopped = True
+            for sid in JOINT_ID:
+                moving_flag = self.tuna.readReg(sid, 66)
+                if moving_flag is None:
+                    continue
+                if moving_flag != 0:
+                    all_stopped = False
+                    break
+            if all_stopped:
+                self.get_logger().info("All joints have stopped moving.")
+                return True
+            time.sleep(0.05)
     
     def destroy_node(self):
         self.default_move()
-        time.sleep(10)
+        self.wait_stopped()
         self.tuna.closeSerialPort()
         super().destroy_node()
 
