@@ -113,12 +113,13 @@ class SendMove(Node):
                     all_stopped = False
                     break
             if all_stopped:
-                self.get_logger().info("All joints have stopped moving.")
+                self.get_logger().info("All joints stopped moving")
                 return True
             time.sleep(0.05)
     
     def destroy_node(self):
         self.default_move()
+        rclpy.spin_once(self, timeout_sec=0)
         self.wait_stopped()
         self.tuna.closeSerialPort()
         super().destroy_node()
