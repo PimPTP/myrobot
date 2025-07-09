@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-import math, rclpy
+import math, rclpy, time
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from trajectory_msgs.msg import JointTrajectory
 from sensor_msgs.msg import JointState
-from std_srvs.srv import Trigger
 from feetech_tuna.feetech_tuna import FeetechTuna
 from .servo_srv import ServoSrv
 
@@ -37,6 +36,7 @@ class SendMove(Node):
 
         self.timer = self.create_timer(0.1, self.publish_states)
 
+        self.default_move()
         self.servo_srv = ServoSrv(self, self.tuna)
 
     def cmd_callback(self, msg: JointTrajectory):
@@ -54,9 +54,10 @@ class SendMove(Node):
                 pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096  
                 pos_cnt  = max(0, min(4095, pos_cnt))
 
-                vel_rpm = (pt.velocities[i] * 60.0 / (2 * math.pi)
-                            if pt.velocities and i < len(pt.velocities) else 0.0)
-                if vel_rpm == 0.0: vel_rpm = 50
+                if pt.velocities and i < len(pt.velocities):
+                    vel_rpm = pt.velocities[i] * 60.0 / (2 * math.pi)
+                else:
+                    vel_rpm = 50
                 vel_cnt  = int(vel_rpm / 0.24)           
                 vel_cnt  = max(1, min(1000, vel_cnt)) 
 
@@ -68,6 +69,7 @@ class SendMove(Node):
                     if vel_rpm == 0:
                         vel_rpm = abs(pos_rad) * 60 / (time_ms / 1000 * 2*math.pi)
                         vel_cnt = max(1, min(1000, int(vel_rpm / 0.24)))
+                time_ms += idx * 1000
                 time_ms = max(1, min(30000, time_ms)) 
 
                 self.tuna.writeReg(sid, 46, vel_cnt)
@@ -89,8 +91,20 @@ class SendMove(Node):
 
         if js.name:
             self.pub_state.publish(js)
+
+    def default_move(self):
+        pos_rad = 0.0
+        vel_cnt = int(50/ 0.24)
+        time_ms = 1000
+        for idx, sid in enumerate(JOINT_ID):
+            pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
+            self.tuna.writeReg(sid, 46, vel_cnt)
+            self.tuna.writeReg(sid, 44, time_ms)
+            self.tuna.writeReg(sid, 42, pos_cnt)
     
     def destroy_node(self):
+        self.default_move()
+        time.sleep(10)
         self.tuna.closeSerialPort()
         super().destroy_node()
 
