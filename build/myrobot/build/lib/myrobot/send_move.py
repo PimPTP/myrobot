@@ -58,7 +58,7 @@ class SendMove(Node):
                     vel_rpm = pt.velocities[i] 
                 else:
                     vel_rpm = 100
-                vel_cnt  = int(vel_rpm *4096.0 / 600)           
+                vel_cnt  = int(vel_rpm *4096.0 / 60)           
                 vel_cnt  = max(1, min(4096, vel_cnt)) 
 
                 t_ms = pt.time_from_start.sec * 1000 + pt.time_from_start.nanosec / 1e6
