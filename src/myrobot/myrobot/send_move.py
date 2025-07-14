@@ -58,7 +58,7 @@ class SendMove(Node):
                     vel_rpm = pt.velocities[i] 
                 else:
                     vel_rpm = 100
-                vel_cnt  = int(vel_rpm / 0.24)           
+                vel_cnt  = int(vel_rpm *4096.0 / 600)           
                 vel_cnt  = max(1, min(1000, vel_cnt)) 
 
                 t_ms = pt.time_from_start.sec * 1000 + pt.time_from_start.nanosec / 1e6
@@ -68,7 +68,7 @@ class SendMove(Node):
                     time_ms = int(t_ms)
                     if vel_rpm == 0:
                         vel_rpm = abs(pos_rad) / (time_ms / 1000)
-                        vel_cnt = max(1, min(1000, int(vel_rpm / 0.24)))
+                        vel_cnt = max(1, min(1000, int(vel_rpm *4096.0 / 600)))
                 time_ms += idx * 1000
                 time_ms = max(1, min(30000, time_ms)) 
 
@@ -87,14 +87,14 @@ class SendMove(Node):
                 continue
             js.name.append(name)
             js.position.append((pos_cnt / 4096.0) * 2*math.pi - math.pi)
-            js.velocity.append(speed_cnt * 0.24)
+            js.velocity.append(speed_cnt *600 / 4096.0)
 
         if js.name:
             self.pub_state.publish(js)
 
     def default_move(self):
         pos_rad = 0.0
-        vel_cnt = int(100/0.24)
+        vel_cnt = int(100 *4096 / 600)
         time_ms = 1000
         for idx, sid in enumerate(JOINT_ID):
             pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
@@ -154,7 +154,6 @@ def main():
             node.destroy_node()
         except Exception:
             pass
-
 
 if __name__ == '__main__':
     main()
