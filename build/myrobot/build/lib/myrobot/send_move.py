@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import math, rclpy, time
+import math, rclpy, time, signal
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from trajectory_msgs.msg import JointTrajectory
@@ -57,7 +57,7 @@ class SendMove(Node):
                 if pt.velocities and i < len(pt.velocities):
                     vel_rpm = pt.velocities[i] 
                 else:
-                    vel_rpm = 50
+                    vel_rpm = 100
                 vel_cnt  = int(vel_rpm / 0.24)           
                 vel_cnt  = max(1, min(1000, vel_cnt)) 
 
@@ -94,7 +94,7 @@ class SendMove(Node):
 
     def default_move(self):
         pos_rad = 0.0
-        vel_cnt = int(50/ 0.24)
+        vel_cnt = int(100/0.24)
         time_ms = 1000
         for idx, sid in enumerate(JOINT_ID):
             pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
@@ -102,38 +102,59 @@ class SendMove(Node):
             self.tuna.writeReg(sid, 44, time_ms)
             self.tuna.writeReg(sid, 42, pos_cnt)
 
-    def wait_stopped(self):
-        while True:
+    def wait_stopped(self, timeout_sec=5.0):
+        start = time.time()
+        while time.time() - start < timeout_sec:
             all_stopped = True
             for sid in JOINT_ID:
-                moving_flag = self.tuna.readReg(sid, 66)
-                if moving_flag is None:
-                    continue
-                if moving_flag != 0:
+                try:
+                    moving_flag = self.tuna.readReg(sid, 66)
+                    if moving_flag is None or moving_flag != 0:
+                        all_stopped = False
+                        break
+                except Exception:
                     all_stopped = False
                     break
             if all_stopped:
-                self.get_logger().info("All joints stopped moving")
                 return True
             time.sleep(0.05)
+        return False
     
     def destroy_node(self):
-        self.default_move()
-        rclpy.spin_once(self, timeout_sec=0)
-        self.wait_stopped()
-        self.tuna.closeSerialPort()
+        self.timer.cancel()
         super().destroy_node()
 
 def main():
     rclpy.init()
     node = SendMove()
+
+    shutdown_flag = False
+    def sigint_handler(signum, frame):
+        nonlocal shutdown_flag
+        shutdown_flag = True
+        rclpy.shutdown()
+    signal.signal(signal.SIGINT, sigint_handler)
+
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
         pass
     finally:
-        node.destroy_node()
-        rclpy.shutdown()
+        if shutdown_flag:
+            try:
+                node.default_move()
+                node.wait_stopped(timeout_sec=5.0)
+            except Exception:
+                pass
+        try:
+            node.tuna.closeSerialPort()
+        except Exception:
+            pass
+        try:
+            node.destroy_node()
+        except Exception:
+            pass
+
 
 if __name__ == '__main__':
     main()

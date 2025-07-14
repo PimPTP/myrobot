@@ -39,8 +39,7 @@ def generate_launch_description():
             package=package_name,
             executable='send_move',
             name='send_move',
-            output='screen'
-        ),
+            output='screen'),
         Node(
             package='rviz2',
             executable='rviz2',
