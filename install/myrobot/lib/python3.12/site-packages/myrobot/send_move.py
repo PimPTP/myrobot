@@ -35,7 +35,7 @@ class SendMove(Node):
             '/joint_states',
             qos_profile)
         
-        self.pub_monitor = self.create_publisher(String, '/monitor_joint', qos_profile)
+        self.pub_monitor = self.create_publisher(String, '/joint_monitor', qos_profile)
 
         self.timer = self.create_timer(0.1, self.publish_states)
 
@@ -72,10 +72,11 @@ class SendMove(Node):
     def publish_states(self):
         js = JointState()
         js.header.stamp = self.get_clock().now().to_msg()
+        lines = []
 
         for name, sid in zip(JOINTS, JOINT_ID):
             pos_cnt = self.tuna.readReg(sid, 56)
-            speed_cnt = self.tuna.readReg(sid, 58)
+            vel_cnt = self.tuna.readReg(sid, 58)
 
             voltage = self.tuna.readReg(sid, 62)
             voltage = voltage/10.0
@@ -84,18 +85,23 @@ class SendMove(Node):
             moving_flag = self.tuna.readReg(sid, 66)
             moving_str = "Moving" if moving_flag else "Fixed"
 
-            if pos_cnt is None or speed_cnt is None:
+            if pos_cnt is None or vel_cnt is None:
                 continue
 
             pos_rad = (pos_cnt / 4096.0) * 2*math.pi - math.pi
-            vel_rpm = speed_cnt *60 / 4096.0
+            vel_rpm = vel_cnt *60 / 4096.0
 
             js.name.append(name)
             js.position.append(pos_rad)
             js.velocity.append(vel_rpm)
 
+            lines.append(
+            f"{name}  Position: {pos_rad:6.3f}rad  Velocity: {vel_rpm:6.2f}rpm  "
+            f"Voltage : {voltage}V  Current: {current}mA  Temp: {temp}°C  {moving_str}")
+
         if js.name:
             self.pub_state.publish(js)
+            self.pub_monitor.publish(String(data='\n'.join(lines)))
 
     def default_move(self):
         pos_rad = 0.0
