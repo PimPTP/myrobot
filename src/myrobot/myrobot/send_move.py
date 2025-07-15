@@ -57,9 +57,9 @@ class SendMove(Node):
                 if pt.velocities and i < len(pt.velocities):
                     vel_rpm = pt.velocities[i] 
                 else:
-                    vel_rpm = 100
+                    vel_rpm = 10
                 vel_cnt  = int(vel_rpm *4096.0 / 60)           
-                vel_cnt  = max(1, min(4096, vel_cnt)) 
+                vel_cnt  = max(-8000, min(8000, vel_cnt)) 
 
                 t_ms = pt.time_from_start.sec * 1000 + pt.time_from_start.nanosec / 1e6
                 if t_ms == 0:
@@ -94,7 +94,7 @@ class SendMove(Node):
 
     def default_move(self):
         pos_rad = 0.0
-        vel_cnt = int(100 *4096 / 60)
+        vel_cnt = int(10 *4096 / 60)
         time_ms = 1000
         for idx, sid in enumerate(JOINT_ID):
             pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
