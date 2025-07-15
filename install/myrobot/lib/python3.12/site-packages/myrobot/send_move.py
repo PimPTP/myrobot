@@ -2,6 +2,7 @@
 import math, rclpy, time, signal
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
+from std_msgs.msg import String
 from trajectory_msgs.msg import JointTrajectory
 from sensor_msgs.msg import JointState
 from feetech_tuna.feetech_tuna import FeetechTuna
@@ -33,6 +34,8 @@ class SendMove(Node):
             JointState,
             '/joint_states',
             qos_profile)
+        
+        self.pub_monitor = self.create_publisher(String, '/monitor_joint', qos_profile)
 
         self.timer = self.create_timer(0.1, self.publish_states)
 
@@ -51,30 +54,20 @@ class SendMove(Node):
                 sid = JOINT_ID[idx]
 
                 pos_rad = pt.positions[i]
-                pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096  
+                pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
                 pos_cnt  = max(0, min(4095, pos_cnt))
 
                 if pt.velocities and i < len(pt.velocities):
-                    vel_rpm = pt.velocities[i] 
+                    vel_rpm = pt.velocities[i]
                 else:
                     vel_rpm = 10
-                vel_cnt  = int(vel_rpm *4096.0 / 60)           
-                vel_cnt  = max(-8000, min(8000, vel_cnt)) 
-
-                t_ms = pt.time_from_start.sec * 1000 + pt.time_from_start.nanosec / 1e6
-                if t_ms == 0:
-                    time_ms = max(int(abs(pos_rad) / vel_rpm * 1000), 100)
-                else:
-                    time_ms = int(t_ms)
-                    if vel_rpm == 0:
-                        vel_rpm = abs(pos_rad) / (time_ms / 1000)
-                        vel_cnt = max(1, min(1000, int(vel_rpm *4096.0 / 60)))
-                time_ms += idx * 1000
-                time_ms = max(1, min(30000, time_ms)) 
+                vel_cnt  = int(vel_rpm *4096.0 / 60)
+                vel_cnt  = max(-8000, min(8000, vel_cnt))
 
                 self.tuna.writeReg(sid, 46, vel_cnt)
-                self.tuna.writeReg(sid, 44, time_ms)
                 self.tuna.writeReg(sid, 42, pos_cnt)
+
+                time.sleep(0.1 * idx) 
 
     def publish_states(self):
         js = JointState()
@@ -83,11 +76,23 @@ class SendMove(Node):
         for name, sid in zip(JOINTS, JOINT_ID):
             pos_cnt = self.tuna.readReg(sid, 56)
             speed_cnt = self.tuna.readReg(sid, 58)
-            if pos_cnt is None:
+
+            voltage = self.tuna.readReg(sid, 62)
+            voltage = voltage/10.0
+            current = self.tuna.readReg(sid, 69)
+            temp = self.tuna.readReg(sid, 63)
+            moving_flag = self.tuna.readReg(sid, 66)
+            moving_str = "Moving" if moving_flag else "Fixed"
+
+            if pos_cnt is None or speed_cnt is None:
                 continue
+
+            pos_rad = (pos_cnt / 4096.0) * 2*math.pi - math.pi
+            vel_rpm = speed_cnt *60 / 4096.0
+
             js.name.append(name)
-            js.position.append((pos_cnt / 4096.0) * 2*math.pi - math.pi)
-            js.velocity.append(speed_cnt *60 / 4096.0)
+            js.position.append(pos_rad)
+            js.velocity.append(vel_rpm)
 
         if js.name:
             self.pub_state.publish(js)
@@ -95,11 +100,9 @@ class SendMove(Node):
     def default_move(self):
         pos_rad = 0.0
         vel_cnt = int(10 *4096 / 60)
-        time_ms = 1000
         for idx, sid in enumerate(JOINT_ID):
             pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
             self.tuna.writeReg(sid, 46, vel_cnt)
-            self.tuna.writeReg(sid, 44, time_ms)
             self.tuna.writeReg(sid, 42, pos_cnt)
 
     def wait_stopped(self, timeout_sec=5.0):
