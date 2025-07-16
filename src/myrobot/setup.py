@@ -30,6 +30,7 @@ setup(
         'console_scripts': [
             'state_publisher = myrobot.state_publisher:main',
             'send_move = myrobot.send_move:main',
+            'monitor_ui = myrobot.monitor_ui:main',
         ],
     },
 )

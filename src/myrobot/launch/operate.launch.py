@@ -41,6 +41,12 @@ def generate_launch_description():
             name='send_move',
             output='screen'),
         Node(
+            package=package_name,
+            executable='monitor_ui',
+            name='monitor_ui',
+            output='screen',
+            prefix='bash -c "source ~/myrobot_ws/.venv/bin/activate && exec"'),
+        Node(
             package='rviz2',
             executable='rviz2',
             name='rviz2',

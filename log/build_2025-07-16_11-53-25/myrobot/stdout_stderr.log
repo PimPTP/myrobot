@@ -1,0 +1,22 @@
+running develop
+running egg_info
+writing myrobot.egg-info/PKG-INFO
+writing dependency_links to myrobot.egg-info/dependency_links.txt
+writing entry points to myrobot.egg-info/entry_points.txt
+writing requirements to myrobot.egg-info/requires.txt
+writing top-level names to myrobot.egg-info/top_level.txt
+reading manifest file 'myrobot.egg-info/SOURCES.txt'
+writing manifest file 'myrobot.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot.egg-link (link to .)
+Installing monitor_ui script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+Installing send_move script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+
+Installed /home/pim0ubuntu/myrobot_ws/build/myrobot
+running symlink_data
+symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/resource/myrobot -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/package.xml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot
+symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/launch/operate.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/launch/display.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/urdf/robot.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
