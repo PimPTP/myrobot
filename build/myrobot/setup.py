@@ -1,1 +1,0 @@
-/home/pim0ubuntu/myrobot_ws/src/myrobot/setup.py

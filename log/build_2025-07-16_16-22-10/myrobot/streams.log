@@ -1,0 +1,31 @@
+[0.763s] Invoking command in '/home/pim0ubuntu/myrobot_ws/build/myrobot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pim0ubuntu/myrobot_ws/build/myrobot/build --no-deps symlink_data
+[1.197s] running develop
+[1.444s] running egg_info
+[1.444s] creating myrobot.egg-info
+[1.463s] writing myrobot.egg-info/PKG-INFO
+[1.464s] writing dependency_links to myrobot.egg-info/dependency_links.txt
+[1.464s] writing entry points to myrobot.egg-info/entry_points.txt
+[1.465s] writing requirements to myrobot.egg-info/requires.txt
+[1.465s] writing top-level names to myrobot.egg-info/top_level.txt
+[1.465s] writing manifest file 'myrobot.egg-info/SOURCES.txt'
+[1.508s] reading manifest file 'myrobot.egg-info/SOURCES.txt'
+[1.508s] writing manifest file 'myrobot.egg-info/SOURCES.txt'
+[1.528s] running build_ext
+[1.528s] Creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot.egg-link (link to .)
+[1.529s] Installing monitor_ui script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.530s] Installing send_move script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.530s] Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.530s] 
+[1.530s] Installed /home/pim0ubuntu/myrobot_ws/build/myrobot
+[1.530s] running symlink_data
+[1.530s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index
+[1.530s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index
+[1.530s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+[1.530s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/resource/myrobot -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+[1.530s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/package.xml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot
+[1.531s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.531s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/launch/operate.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.531s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/launch/display.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.531s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
+[1.531s] symbolically linking /home/pim0ubuntu/myrobot_ws/build/myrobot/urdf/robot.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
+[1.580s] Invoked command in '/home/pim0ubuntu/myrobot_ws/build/myrobot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/pim0ubuntu/myrobot_ws/build/myrobot/build --no-deps symlink_data

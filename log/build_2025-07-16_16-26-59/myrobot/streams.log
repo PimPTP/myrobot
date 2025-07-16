@@ -1,0 +1,69 @@
+[0.780s] Invoking command in '/home/pim0ubuntu/myrobot_ws/build/myrobot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pim0ubuntu/myrobot_ws/build/myrobot/build
+[1.046s] running develop
+[1.220s] Removing /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot.egg-link (link to .)
+[1.252s] Invoked command in '/home/pim0ubuntu/myrobot_ws/build/myrobot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/pim0ubuntu/myrobot_ws/build/myrobot/build
+[1.253s] Invoking command in '/home/pim0ubuntu/myrobot_ws/src/myrobot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/myrobot build --build-base /home/pim0ubuntu/myrobot_ws/build/myrobot/build install --record /home/pim0ubuntu/myrobot_ws/build/myrobot/install.log --single-version-externally-managed install_data --force
+[1.488s] running egg_info
+[1.508s] writing ../../build/myrobot/myrobot.egg-info/PKG-INFO
+[1.508s] writing dependency_links to ../../build/myrobot/myrobot.egg-info/dependency_links.txt
+[1.509s] writing entry points to ../../build/myrobot/myrobot.egg-info/entry_points.txt
+[1.509s] writing requirements to ../../build/myrobot/myrobot.egg-info/requires.txt
+[1.509s] writing top-level names to ../../build/myrobot/myrobot.egg-info/top_level.txt
+[1.543s] reading manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'
+[1.544s] writing manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'
+[1.544s] running build
+[1.544s] running build_py
+[1.544s] creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build
+[1.544s] creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib
+[1.544s] creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+[1.545s] copying feetech_tuna/servotemplates.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+[1.546s] copying feetech_tuna/tuna.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+[1.546s] copying feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna
+[1.546s] creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.546s] copying myrobot/servo_srv.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.546s] copying myrobot/send_move.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.546s] copying myrobot/state_publisher.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.546s] copying myrobot/monitor_ui.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.546s] copying myrobot/__init__.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.546s] creating /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna
+[1.546s] copying feetech_tuna/feetech_tuna/feetech_tuna.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna
+[1.546s] copying feetech_tuna/feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna
+[1.546s] running install
+[1.551s] running install_lib
+[1.570s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+[1.571s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/servotemplates.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+[1.571s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna
+[1.571s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna/feetech_tuna.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna
+[1.571s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna
+[1.571s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/tuna.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+[1.572s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/feetech_tuna/__init__.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna
+[1.572s] creating /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.572s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/servo_srv.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.572s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/send_move.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.572s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/state_publisher.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.572s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/monitor_ui.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.572s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/__init__.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.574s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/servotemplates.py to servotemplates.cpython-312.pyc
+[1.574s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/feetech_tuna.py to feetech_tuna.cpython-312.pyc
+[1.576s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/__init__.py to __init__.cpython-312.pyc
+[1.576s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/tuna.py to tuna.cpython-312.pyc
+[1.576s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__init__.py to __init__.cpython-312.pyc
+[1.576s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/servo_srv.py to servo_srv.cpython-312.pyc
+[1.577s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/send_move.py to send_move.cpython-312.pyc
+[1.579s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/state_publisher.py to state_publisher.cpython-312.pyc
+[1.579s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/monitor_ui.py to monitor_ui.cpython-312.pyc
+[1.580s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__init__.py to __init__.cpython-312.pyc
+[1.580s] running install_data
+[1.581s] copying resource/myrobot -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages
+[1.581s] copying package.xml -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot
+[1.581s] copying launch/operate.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.581s] copying launch/display.launch.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/launch
+[1.581s] copying urdf/robot.urdf.xacro -> /home/pim0ubuntu/myrobot_ws/install/myrobot/share/myrobot/urdf
+[1.581s] running install_egg_info
+[1.600s] Copying ../../build/myrobot/myrobot.egg-info to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info
+[1.600s] running install_scripts
+[1.718s] Installing monitor_ui script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.719s] Installing send_move script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.719s] Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.719s] writing list of installed files to '/home/pim0ubuntu/myrobot_ws/build/myrobot/install.log'
+[1.753s] Invoked command in '/home/pim0ubuntu/myrobot_ws/src/myrobot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/myrobot build --build-base /home/pim0ubuntu/myrobot_ws/build/myrobot/build install --record /home/pim0ubuntu/myrobot_ws/build/myrobot/install.log --single-version-externally-managed install_data --force
