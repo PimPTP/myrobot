@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import math, rclpy, time, signal
+import math, rclpy, time, signal, threading
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from std_msgs.msg import String
@@ -43,6 +43,9 @@ class SendMove(Node):
         self.servo_srv = ServoSrv(self, self.tuna)
 
     def cmd_callback(self, msg: JointTrajectory):
+        threading.Thread(target=self.send_trajectory, args=(msg,), daemon=True).start()
+
+    def send_trajectory(self, msg: JointTrajectory):
         if not msg.points:
             return
 
@@ -67,37 +70,38 @@ class SendMove(Node):
                 self.tuna.writeReg(sid, 46, vel_cnt)
                 self.tuna.writeReg(sid, 42, pos_cnt)
 
-                time.sleep(0.1 * idx) 
-
     def publish_states(self):
         js = JointState()
         js.header.stamp = self.get_clock().now().to_msg()
         lines = []
 
         for name, sid in zip(JOINTS, JOINT_ID):
-            pos_cnt = self.tuna.readReg(sid, 56)
-            vel_cnt = self.tuna.readReg(sid, 58)
+            try:
+                pos_cnt = self.tuna.readReg(sid, 56)
+                vel_cnt = self.tuna.readReg(sid, 58)
+                voltage = self.tuna.readReg(sid, 62)
+                current = self.tuna.readReg(sid, 69)
+                temp = self.tuna.readReg(sid, 63)
+                moving_flag = self.tuna.readReg(sid, 66)
 
-            voltage = self.tuna.readReg(sid, 62)
-            voltage = voltage/10.0
-            current = self.tuna.readReg(sid, 69)
-            temp = self.tuna.readReg(sid, 63)
-            moving_flag = self.tuna.readReg(sid, 66)
-            moving_str = "Moving" if moving_flag else "Fixed"
+                if None in (pos_cnt, vel_cnt, voltage, current, temp, moving_flag):
+                    continue
 
-            if pos_cnt is None or vel_cnt is None:
-                continue
+                pos_rad = (pos_cnt / 4096.0) * 2 * math.pi - math.pi
+                vel_rpm = vel_cnt * 60 / 4096.0
+                voltage = voltage / 10.0
+                moving_str = "Moving" if moving_flag else "Fixed"
 
-            pos_rad = (pos_cnt / 4096.0) * 2*math.pi - math.pi
-            vel_rpm = vel_cnt *60 / 4096.0
+                js.name.append(name)
+                js.position.append(pos_rad)
+                js.velocity.append(vel_rpm)
 
-            js.name.append(name)
-            js.position.append(pos_rad)
-            js.velocity.append(vel_rpm)
+                lines.append(
+                    f"{name}  Position: {pos_rad:6.3f}rad  Velocity: {vel_rpm:6.2f}rpm  "
+                    f"Voltage : {voltage}V  Current: {current}mA  Temp: {temp}°C  {moving_str}")
 
-            lines.append(
-            f"{name}  Position: {pos_rad:6.3f}rad  Velocity: {vel_rpm:6.2f}rpm  "
-            f"Voltage : {voltage}V  Current: {current}mA  Temp: {temp}°C  {moving_str}")
+            except Exception:
+                pass
 
         if js.name:
             self.pub_state.publish(js)
