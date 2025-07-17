@@ -69,6 +69,7 @@ class SendMove(Node):
 
                 self.tuna.writeReg(sid, 46, vel_cnt)
                 self.tuna.writeReg(sid, 42, pos_cnt)
+                time.sleep(0.05)
 
     def publish_states(self):
         js = JointState()
