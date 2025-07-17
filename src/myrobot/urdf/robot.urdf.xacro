@@ -63,9 +63,9 @@
 
   <xacro:joint name="joint_1" parent="link_0" child="link_1" xyz="0 1 0" rpy="-1.57 0 0" axis="0 0 1" lower="-3.14" upper="3.14"/>
   <xacro:joint name="joint_2" parent="link_1" child="link_2" xyz="0 0 1" rpy="0 1.57 0" axis="0 0 1" lower="-0.86" upper="0.73"/>
-  <xacro:joint name="joint_3" parent="link_2" child="link_3" xyz="0 1 0" rpy="-1.57 0 0" axis="0 0 1" lower="-2.69" upper="2.31"/>
-  <xacro:joint name="joint_4" parent="link_3" child="link_4" xyz="0 0 1" rpy="1.57 0 0" axis="0 0 1" lower="-1.57" upper="1.45"/>
-  <xacro:joint name="joint_5" parent="link_4" child="link_5" xyz="0 1 0" rpy="-1.57 0 0" axis="0 0 1" lower="-3.14" upper="1.90"/>
-  <xacro:joint name="joint_6" parent="link_5" child="link_6" xyz="0 0 1" rpy="1.57 0 0" axis="0 0 1" lower="-0.57" upper="1.19"/>
+  <xacro:joint name="joint_3" parent="link_2" child="link_3" xyz="0 1 0" rpy="1.57 0 0" axis="0 0 1" lower="-2.69" upper="2.31"/>
+  <xacro:joint name="joint_4" parent="link_3" child="link_4" xyz="0 0 -1" rpy="1.57 0 0" axis="0 0 1" lower="-1.57" upper="1.45"/>
+  <xacro:joint name="joint_5" parent="link_4" child="link_5" xyz="0 -1 0" rpy="-1.57 0 0" axis="0 0 1" lower="-3.14" upper="1.90"/>
+  <xacro:joint name="joint_6" parent="link_5" child="link_6" xyz="0 0 -1" rpy="1.57 0 0" axis="0 0 1" lower="-0.57" upper="1.19"/>
 
 </robot>
