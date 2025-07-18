@@ -13,6 +13,7 @@ BAUD_RATE = 115200
 
 JOINTS = ['joint_1','joint_2','joint_3','joint_4','joint_5','joint_6']
 JOINT_ID = [10, 11, 12, 13, 14, 15]
+JOINT_LIMITS = [(-3.14, 3.14), (-0.67, 0.92), (-2.67, 2.33), (-1.82, 1.21), (-3.14, 1.90), (-0.21, 1.55)]
 
 class SendMove(Node):
     def __init__(self):
@@ -55,10 +56,11 @@ class SendMove(Node):
                     continue
                 idx = JOINTS.index(name)
                 sid = JOINT_ID[idx]
+                limit = JOINT_LIMITS[idx]
 
                 pos_rad = pt.positions[i]
+                pos_rad = max(limit[0], min(limit[1], pos_rad))
                 pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
-                pos_cnt  = max(0, min(4095, pos_cnt))
 
                 if pt.velocities and i < len(pt.velocities):
                     vel_rpm = pt.velocities[i]
