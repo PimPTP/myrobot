@@ -60,7 +60,8 @@ class SendMove(Node):
 
                 pos_rad = pt.positions[i]
                 pos_rad = max(limit[0], min(limit[1], pos_rad))
-                pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
+                pos_cnt = int(round((pos_rad + math.pi) * (4096.0 / (2 * math.pi))))
+                pos_cnt = max(0, min(4095, pos_cnt))
 
                 if pt.velocities and i < len(pt.velocities):
                     vel_rpm = pt.velocities[i]
@@ -113,7 +114,8 @@ class SendMove(Node):
         pos_rad = 0.0
         vel_cnt = int(10 *4096 / 60)
         for idx, sid in enumerate(JOINT_ID):
-            pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
+            pos_cnt = int(round((pos_rad + math.pi) * (4096.0 / (2 * math.pi))))
+            pos_cnt = max(0, min(4095, pos_cnt))
             self.tuna.writeReg(sid, 46, vel_cnt)
             self.tuna.writeReg(sid, 42, pos_cnt)
 
