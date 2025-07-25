@@ -1,0 +1,27 @@
+[0.770s] Invoking command in '/home/pim0ubuntu/myrobot_ws/src/myrobot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/myrobot build --build-base /home/pim0ubuntu/myrobot_ws/build/myrobot/build install --record /home/pim0ubuntu/myrobot_ws/build/myrobot/install.log --single-version-externally-managed install_data
+[1.012s] running egg_info
+[1.029s] writing ../../build/myrobot/myrobot.egg-info/PKG-INFO
+[1.029s] writing dependency_links to ../../build/myrobot/myrobot.egg-info/dependency_links.txt
+[1.030s] writing entry points to ../../build/myrobot/myrobot.egg-info/entry_points.txt
+[1.030s] writing requirements to ../../build/myrobot/myrobot.egg-info/requires.txt
+[1.030s] writing top-level names to ../../build/myrobot/myrobot.egg-info/top_level.txt
+[1.064s] reading manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'
+[1.064s] writing manifest file '../../build/myrobot/myrobot.egg-info/SOURCES.txt'
+[1.064s] running build
+[1.064s] running build_py
+[1.065s] copying myrobot/cam_input.py -> /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot
+[1.065s] running install
+[1.079s] running install_lib
+[1.097s] copying /home/pim0ubuntu/myrobot_ws/build/myrobot/build/lib/myrobot/cam_input.py -> /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot
+[1.098s] byte-compiling /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/cam_input.py to cam_input.cpython-312.pyc
+[1.099s] running install_data
+[1.099s] running install_egg_info
+[1.118s] removing '/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info' (and everything under it)
+[1.120s] Copying ../../build/myrobot/myrobot.egg-info to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info
+[1.120s] running install_scripts
+[1.230s] Installing cam_input script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.231s] Installing monitor_ui script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.232s] Installing send_move script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.232s] Installing state_publisher script to /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot
+[1.232s] writing list of installed files to '/home/pim0ubuntu/myrobot_ws/build/myrobot/install.log'
+[1.268s] Invoked command in '/home/pim0ubuntu/myrobot_ws/src/myrobot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/pim0ubuntu/myrobot_ws/build/myrobot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/myrobot build --build-base /home/pim0ubuntu/myrobot_ws/build/myrobot/build install --record /home/pim0ubuntu/myrobot_ws/build/myrobot/install.log --single-version-externally-managed install_data

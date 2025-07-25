@@ -31,6 +31,7 @@ setup(
             'state_publisher = myrobot.state_publisher:main',
             'send_move = myrobot.send_move:main',
             'monitor_ui = myrobot.monitor_ui:main',
+            'cam_input = myrobot.cam_input:main',
         ],
     },
 )

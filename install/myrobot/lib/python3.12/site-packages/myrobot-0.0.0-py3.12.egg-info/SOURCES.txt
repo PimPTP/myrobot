@@ -15,8 +15,11 @@ feetech_tuna/feetech_tuna/__init__.py
 feetech_tuna/feetech_tuna/feetech_tuna.py
 launch/display.launch.py
 launch/operate.launch.py
+myrobot/Right_Elbow_Angle_v2.py
 myrobot/__init__.py
+myrobot/cam_input.py
 myrobot/monitor_ui.py
+myrobot/param.py
 myrobot/send_move.py
 myrobot/servo_srv.py
 myrobot/state_publisher.py

@@ -7,13 +7,7 @@ from trajectory_msgs.msg import JointTrajectory
 from sensor_msgs.msg import JointState
 from feetech_tuna.feetech_tuna import FeetechTuna
 from .servo_srv import ServoSrv
-
-SERIAL_PORT = '/dev/ttyUSB0'
-BAUD_RATE = 115200
-
-JOINTS = ['joint_1','joint_2','joint_3','joint_4','joint_5','joint_6']
-JOINT_ID = [10, 11, 12, 13, 14, 15]
-JOINT_LIMITS = [(-3.14, 3.14), (-0.67, 0.92), (-2.67, 2.33), (-1.82, 1.21), (-3.14, 1.90), (-0.21, 1.55)]
+from . import param
 
 class SendMove(Node):
     def __init__(self):
@@ -21,8 +15,8 @@ class SendMove(Node):
         qos_profile = QoSProfile(depth=10)
 
         self.tuna = FeetechTuna()
-        if not self.tuna.openSerialPort(SERIAL_PORT, BAUD_RATE):
-            self.get_logger().error(f"Failed to open serial port {SERIAL_PORT}")
+        if not self.tuna.openSerialPort(param.SERIAL_PORT, param.BAUD_RATE):
+            self.get_logger().error(f"Failed to open serial port {param.SERIAL_PORT}")
             raise RuntimeError("Cannot open serial port")
 
         self.sub_cmd = self.create_subscription(
@@ -52,15 +46,16 @@ class SendMove(Node):
 
         for pt in msg.points:
             for i, name in enumerate(msg.joint_names):
-                if name not in JOINTS:
+                if name not in param.JOINTS:
                     continue
-                idx = JOINTS.index(name)
-                sid = JOINT_ID[idx]
-                limit = JOINT_LIMITS[idx]
+                idx = param.JOINTS.index(name)
+                sid = param.JOINT_ID[idx]
+                limit = param.JOINT_LIMITS[idx]
 
                 pos_rad = pt.positions[i]
                 pos_rad = max(limit[0], min(limit[1], pos_rad))
-                pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
+                pos_cnt = int(round((pos_rad + math.pi) * (4096.0 / (2 * math.pi))))
+                pos_cnt = max(0, min(4095, pos_cnt))
 
                 if pt.velocities and i < len(pt.velocities):
                     vel_rpm = pt.velocities[i]
@@ -77,7 +72,7 @@ class SendMove(Node):
         js.header.stamp = self.get_clock().now().to_msg()
         lines = []
 
-        for name, sid in zip(JOINTS, JOINT_ID):
+        for name, sid in zip(param.JOINTS, param.JOINT_ID):
             try:
                 pos_cnt = self.tuna.readReg(sid, 56)
                 vel_cnt = self.tuna.readReg(sid, 58)
@@ -112,8 +107,9 @@ class SendMove(Node):
     def default_move(self):
         pos_rad = 0.0
         vel_cnt = int(10 *4096 / 60)
-        for idx, sid in enumerate(JOINT_ID):
-            pos_cnt = int(round(((pos_rad + math.pi) * (4096.0 / (2*math.pi))))) % 4096
+        for idx, sid in enumerate(param.JOINT_ID):
+            pos_cnt = int(round((pos_rad + math.pi) * (4096.0 / (2 * math.pi))))
+            pos_cnt = max(0, min(4095, pos_cnt))
             self.tuna.writeReg(sid, 46, vel_cnt)
             self.tuna.writeReg(sid, 42, pos_cnt)
 
@@ -121,7 +117,7 @@ class SendMove(Node):
         start = time.time()
         while time.time() - start < timeout_sec:
             all_stopped = True
-            for sid in JOINT_ID:
+            for sid in param.JOINT_ID:
                 try:
                     moving_flag = self.tuna.readReg(sid, 66)
                     if moving_flag is None or moving_flag != 0:

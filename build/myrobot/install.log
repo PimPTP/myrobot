@@ -4,8 +4,11 @@
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/servo_srv.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/send_move.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/state_publisher.py
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/Right_Elbow_Angle_v2.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/monitor_ui.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__init__.py
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/param.py
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/cam_input.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/feetech_tuna.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/__init__.py
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/__pycache__/servotemplates.cpython-312.pyc
@@ -14,8 +17,11 @@
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/servo_srv.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/send_move.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/state_publisher.cpython-312.pyc
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/Right_Elbow_Angle_v2.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/monitor_ui.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/__init__.cpython-312.pyc
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/param.cpython-312.pyc
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot/__pycache__/cam_input.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/__pycache__/feetech_tuna.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/feetech_tuna/feetech_tuna/__pycache__/__init__.cpython-312.pyc
 /home/pim0ubuntu/myrobot_ws/install/myrobot/share/ament_index/resource_index/packages/myrobot
@@ -30,6 +36,7 @@
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info/top_level.txt
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info/zip-safe
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/python3.12/site-packages/myrobot-0.0.0-py3.12.egg-info/PKG-INFO
+/home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot/cam_input
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot/monitor_ui
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot/send_move
 /home/pim0ubuntu/myrobot_ws/install/myrobot/lib/myrobot/state_publisher

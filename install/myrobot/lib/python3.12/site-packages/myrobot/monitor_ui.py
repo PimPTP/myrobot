@@ -8,8 +8,8 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import QTimer
 from std_msgs.msg import String
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from . import param
 
-JOINTS = ['joint_1', 'joint_2', 'joint_3', 'joint_4', 'joint_5', 'joint_6']
 PARAMS = ["Position (rad)", "Velocity (rpm)", "Voltage (V)", "Current (mA)", "Temp (°C)", "Status"]
 
 class MonitorNode(Node):
@@ -27,7 +27,7 @@ class MonitorNode(Node):
 
     def send_command(self, positions, velocities):
         msg = JointTrajectory()
-        msg.joint_names = JOINTS
+        msg.joint_names = param.JOINTS
         point = JointTrajectoryPoint()
         point.positions = [float(p) for p in positions]
         point.velocities = [float(v) for v in velocities]
@@ -48,15 +48,15 @@ class MonitorUI(QWidget):
         self.monitor_grid = QGridLayout()
         self.monitor_labels = {key: [] for key in PARAMS}
 
-        for j, joint in enumerate(JOINTS):
+        for j, joint in enumerate(param.JOINTS):
             self.monitor_grid.addWidget(QLabel(f"<b>{joint}</b>"), 0, j + 1)
 
-        for i, param in enumerate(PARAMS):
-            self.monitor_grid.addWidget(QLabel(param), i + 1, 0)
-            for j in range(len(JOINTS)):
+        for i, params in enumerate(PARAMS):
+            self.monitor_grid.addWidget(QLabel(params), i + 1, 0)
+            for j in range(len(param.JOINTS)):
                 label = QLabel("-")
                 self.monitor_grid.addWidget(label, i + 1, j + 1)
-                self.monitor_labels[param].append(label)
+                self.monitor_labels[params].append(label)
 
         monitor_layout.addLayout(self.monitor_grid)
         monitor_box.setLayout(monitor_layout)
@@ -67,24 +67,24 @@ class MonitorUI(QWidget):
         self.pos_inputs = []
         self.vel_inputs = []
 
-        for j, joint in enumerate(JOINTS):
+        for j, joint in enumerate(param.JOINTS):
             grid.addWidget(QLabel(f"<b>{joint}</b>"), 0, j + 1)
 
         grid.addWidget(QLabel("Position (rad)"), 1, 0)
-        for j in range(len(JOINTS)):
+        for j in range(len(param.JOINTS)):
             pos_input = QLineEdit("0.0")
             self.pos_inputs.append(pos_input)
             grid.addWidget(pos_input, 1, j + 1)
 
         grid.addWidget(QLabel("Velocity (rpm)"), 2, 0)
-        for j in range(len(JOINTS)):
+        for j in range(len(param.JOINTS)):
             vel_input = QLineEdit("10.0")
             self.vel_inputs.append(vel_input)
             grid.addWidget(vel_input, 2, j + 1)
 
         self.send_button = QPushButton("Send Command")
         self.send_button.clicked.connect(self.on_send_command)
-        grid.addWidget(self.send_button, 3, 0, 1, len(JOINTS) + 1)
+        grid.addWidget(self.send_button, 3, 0, 1, len(param.JOINTS) + 1)
 
         command_box.setLayout(grid)
         layout.addWidget(command_box)
@@ -104,7 +104,7 @@ class MonitorUI(QWidget):
                 continue
             pos, vel, volt, curr, temp, status = match.groups()
             
-            if j < len(JOINTS):
+            if j < len(param.JOINTS):
                 self.monitor_labels["Position (rad)"][j].setText(pos)
                 self.monitor_labels["Velocity (rpm)"][j].setText(vel)
                 self.monitor_labels["Voltage (V)"][j].setText(volt)
