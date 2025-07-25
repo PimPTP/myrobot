@@ -59,8 +59,14 @@ def euler_to_quaternion(roll, pitch, yaw):
 
 def main():
     rclpy.init()
-    rclpy.spin(StatePublisher())
-    rclpy.shutdown()
+    node =StatePublisher()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
