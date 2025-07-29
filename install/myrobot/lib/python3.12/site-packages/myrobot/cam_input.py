@@ -1,10 +1,11 @@
 #!/home/pim0ubuntu/myrobot_ws/.venv/bin/python
-import rclpy, math, threading
+import rclpy, math, threading, time, signal
 from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from std_msgs.msg import Float64
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 from . import Right_Elbow_Angle_v2 as Right_Elbow
+from . import param
 
 class CamInput(Node):
     def __init__(self):
@@ -18,18 +19,10 @@ class CamInput(Node):
         self.mp_thread = threading.Thread(target=Right_Elbow.RightElbow, daemon=True)
         self.mp_thread.start()
 
+        self.pos_inlast = None
         self.init_move()
 
         self.timer = self.create_timer(0.1, self.timer_callback)
-
-    def init_move(self):
-        traj = JointTrajectory()
-        traj.joint_names = ['joint_1', 'joint_2', 'joint_3', 'joint_4']
-        pt = JointTrajectoryPoint()
-        pt.positions = [3.14, 0.9, -1.5, -0.5]
-        pt.velocities = [10.0, 10.0, 10.0, 10.0]
-        traj.points.append(pt)
-        self.pub_cmd.publish(traj)
 
     def timer_callback(self):
         pos_in = Right_Elbow.R_ANGLE
@@ -39,6 +32,9 @@ class CamInput(Node):
         pos_in = msg.data
         if pos_in < 0.0 or pos_in > 180.0:
             return
+        if self.pos_inlast is not None and abs(pos_in-self.pos_inlast) < 10.0:
+            return
+        self.pos_inlast = pos_in
         pos_rad = -0.5 + (pos_in / 180.0) * math.pi
 
         traj = JointTrajectory()
@@ -49,16 +45,38 @@ class CamInput(Node):
         traj.points.append(pt)
         self.pub_cmd.publish(traj)
 
+    def init_move(self):
+        traj = JointTrajectory()
+        traj.joint_names = param.JOINTS
+        pt = JointTrajectoryPoint()
+        pt.positions = [3.14, 0.9, -1.5, -0.5, 0.0, 0.0]
+        pt.velocities = [10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+        traj.points.append(pt)
+        self.pub_cmd.publish(traj)
+
+    def default_move(self):
+        traj = JointTrajectory()
+        traj.joint_names = param.JOINTS
+        pt = JointTrajectoryPoint()
+        pt.positions = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+        pt.velocities = [10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+        traj.points.append(pt)
+        self.pub_cmd.publish(traj)
+
 def main():
     rclpy.init()
     node = CamInput()
+
+    def sigint_handler(signum, frame):
+        node.default_move()
+        time.sleep(0.1)
+        rclpy.shutdown()
+    signal.signal(signal.SIGINT, sigint_handler)
+
     try:
         rclpy.spin(node)
-    except KeyboardInterrupt:
-        pass
     finally:
         node.destroy_node()
-        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
