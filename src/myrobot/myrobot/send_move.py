@@ -19,23 +19,14 @@ class SendMove(Node):
             self.get_logger().error(f"Failed to open serial port {param.SERIAL_PORT}")
             raise RuntimeError("Cannot open serial port")
 
-        self.sub_cmd = self.create_subscription(
-            JointTrajectory,
-            '/joint_commands',
-            self.cmd_callback,
-            qos_profile)
-
-        self.pub_state = self.create_publisher(
-            JointState,
-            '/joint_states',
-            qos_profile)
-        
+        self.sub_cmd = self.create_subscription(JointTrajectory, '/joint_commands', self.cmd_callback, qos_profile)
+        self.pub_state = self.create_publisher(JointState, '/joint_states', qos_profile)
         self.pub_monitor = self.create_publisher(String, '/joint_monitor', qos_profile)
-
-        self.timer = self.create_timer(0.1, self.publish_states)
 
         self.default_move()
         self.servo_srv = ServoSrv(self, self.tuna)
+
+        self.timer = self.create_timer(0.1, self.publish_states)
 
     def cmd_callback(self, msg: JointTrajectory):
         threading.Thread(target=self.send_trajectory, args=(msg,), daemon=True).start()

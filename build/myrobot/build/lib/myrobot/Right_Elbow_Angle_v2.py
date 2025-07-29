@@ -5,6 +5,7 @@ import math
 mp_drawing = mp.solutions.drawing_utils
 mp_pose = mp.solutions.pose
 R_ANGLE = 0
+POSE_STATUS = ""
 
 # Calculate Angles
 def calculate_angle(a, b, c):
@@ -28,7 +29,7 @@ def calculate_angle(a, b, c):
 
 def RightElbow():
     
-    global R_ANGLE
+    global R_ANGLE, POSE_STATUS
     
     def check_right_arm(results, image):
         landmarks = results.pose_landmarks.landmark
@@ -105,6 +106,9 @@ def RightElbow():
                 # # Render detections
                 mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS, mp_drawing.DrawingSpec(color=(245, 117, 66), thickness=2, circle_radius=2), mp_drawing.DrawingSpec(color=(245, 66, 230), thickness=2, circle_radius=2))
 
+            if POSE_STATUS:
+                cv2.putText(image, POSE_STATUS, (100, 150), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+            
             # image = cv2.flip(image, 1)
             cv2.imshow("Mediapipe Feed", image)
             

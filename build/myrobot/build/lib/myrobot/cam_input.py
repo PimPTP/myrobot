@@ -4,6 +4,7 @@ from rclpy.node import Node
 from rclpy.qos import QoSProfile
 from std_msgs.msg import Float64
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
+from sensor_msgs.msg import JointState
 from . import Right_Elbow_Angle_v2 as Right_Elbow
 from . import param
 
@@ -12,14 +13,16 @@ class CamInput(Node):
         super().__init__('cam_input')
         qos_profile = QoSProfile(depth=10)
 
-        self.pub_cmd = self.create_publisher(JointTrajectory, '/joint_commands', qos_profile)
         self.pub_cam = self.create_publisher(Float64, '/cam_angle', qos_profile)
         self.sub_cam = self.create_subscription(Float64, '/cam_angle', self.cam_callback, qos_profile)
+        self.pub_cmd = self.create_publisher(JointTrajectory, '/joint_commands', qos_profile)
+        self.sub_joint = self.create_subscription(JointState, '/joint_states', self.joint_callback, qos_profile)
 
         self.mp_thread = threading.Thread(target=Right_Elbow.RightElbow, daemon=True)
         self.mp_thread.start()
 
         self.pos_inlast = None
+        self.joint_angle = None
         self.init_move()
 
         self.timer = self.create_timer(0.1, self.timer_callback)
@@ -27,6 +30,14 @@ class CamInput(Node):
     def timer_callback(self):
         pos_in = Right_Elbow.R_ANGLE
         self.pub_cam.publish(Float64(data=float(pos_in)))
+
+        if self.joint_angle is not None:
+            joint_deg = (self.joint_angle + 0.5) * 180.0 / math.pi
+            diff = abs(joint_deg-pos_in)
+            if diff < 10:
+                Right_Elbow.POSE_STATUS = "Correct Pose"
+            else:
+                Right_Elbow.POSE_STATUS = "Incorrect Pose"
 
     def cam_callback(self, msg):
         pos_in = msg.data
@@ -44,6 +55,14 @@ class CamInput(Node):
         pt.velocities = [10.0]
         traj.points.append(pt)
         self.pub_cmd.publish(traj)
+
+    def joint_callback(self, msg):
+        try:
+            if 'joint_4' in msg.name:
+                idx = msg.name.index('joint_4')
+                self.joint_angle = msg.position[idx]
+        except Exception:
+            pass
 
     def init_move(self):
         traj = JointTrajectory()
